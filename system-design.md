@@ -18,6 +18,10 @@ We are building a log viewer for a given experiment. You are a frontend enginee
  - Experiment: An experiment is a model training procedure. Logs are generated through this procedure.
  - Agent: Experiment run on multiple agents. Each agent might generate different logs at any moment. Users want to filter the logs by the selected agents. 
 
+## Visual Aid
+
+![design](/logviewer.png)
+
 ## Requirements
 
 - Experiment Header:
@@ -44,9 +48,12 @@ We are building a log viewer for a given experiment. You are a frontend enginee
 
 Fill this out: 
 
-GET /api/v1/experiments/<experiment-id>/logs 
-Parameter:
+GET /api/v1/experiments/[experiment-id>]/logs 
+
+Parameters:
+
 Response: 
+```
 [
   { 
     level: ‘info’, 
@@ -59,6 +66,7 @@ Response: 
     timestamp: 1627837871.553, 
   }, 
 ] 
+```
   
 ## Task Breakdown
   
